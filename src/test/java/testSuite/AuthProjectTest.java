@@ -1,50 +1,45 @@
 package testSuite;
 
-import com.sun.net.httpserver.Request;
 import config.ApiProjectConfig;
 import factoryRequest.FactoryRequest;
-import io.restassured.response.Response;
-import org.json.JSONObject;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import java.util.Base64;
+
+import java.util.List;
+import java.util.Map;
+
 import static org.hamcrest.Matchers.equalTo;
+import static org.hamcrest.Matchers.greaterThan;
 
-public class AuthProjectTest extends BasicTest {
-    @Test
-    @DisplayName("Create a user, project, delete the user, try to create a project again")
-    public void createUserProjectDeleteUser(){
-        createUser();
+public class AuthProjectTest extends BasicAuthTest {
+        @Test
+        @DisplayName("Verify the create an user later a project - todo.ly")
+        public void create4Projects() {
 
-        JSONObject projectBody = new JSONObject();
-        projectBody.put("Content", "Test Project");
+            for (int i = 1;i <=4;i++) {
+                request.setUrl(ApiProjectConfig.CREATE_PROJECT);
+                request.setHeaders(auth, valueAuth);
 
-        request.setUrl(ApiProjectConfig.CREATE_PROJECT)
-                .setHeaders(auth, valueAuth)
-                .setBody(projectBody.toString());
+                body.put("Content", "Project "+i);
 
-        Response projectResponse = FactoryRequest.make("post").send(request);
-        projectResponse.then().statusCode(200)
-                .body("Content", equalTo("Test Project"));
+                request.setBody(body.toString());
 
-        deleteUser();
+                response = FactoryRequest.make("post").send(request);
+                response.then().statusCode(200).body("Content", equalTo(body.get("Content")));
+            }
 
-        request.setUrl(ApiProjectConfig.CREATE_PROJECT)
-                .setHeaders(auth, valueAuth)
-                .setBody(projectBody.toString());
 
-        projectResponse = FactoryRequest.make("post").send(request);
-        projectResponse.then().statusCode(200)
-                .body("ErrorMessage", equalTo("Account does not exist"))
-                .body("Status", equalTo(404));
+        }
 
-    }
+        @Test
+        @DisplayName("Delete all project - todo.ly")
+        public void deleteAllProject() {
+            request.setUrl(ApiProjectConfig.READ_ALL_PROJECTS);
 
-    public void createUser(){
-        JSONObject userBody = new JSONObject();
-        userBody.put("Email", "examen2@gmail.com");
-        userBody.put("Password", "123456");
-        userBody.put("FullName", "Wendy");
-    }
 
+
+        }
 }
+
+
+
