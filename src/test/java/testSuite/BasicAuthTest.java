@@ -20,7 +20,7 @@ public class BasicAuthTest {
 
     public void before() {
         body.put("Email", ApiUserConfig.user);
-        body.put("FullName", "Wendy");
+        body.put("FullName", "wendy");
         body.put("Password", ApiUserConfig.pwd);
 
         auth = "Authorization";
