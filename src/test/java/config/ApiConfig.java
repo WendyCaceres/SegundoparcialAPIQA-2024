@@ -2,8 +2,8 @@ package config;
 
 public class ApiConfig {
     public static String host="https://todo.ly";
-    public static String user="api2024@2024.com";
-    public static String pwd="12345";
+    public static String user="examen2@gmail.com";
+    public static String pwd="123456";
 
     public static final String CREATE_PROJECT=host+"/api/projects.json";
     public static final String UPDATE_PROJECT=host+"/api/projects/{id}.json";
