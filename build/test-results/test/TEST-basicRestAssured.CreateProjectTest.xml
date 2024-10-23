@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="basicRestAssured.CreateProjectTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2024-10-23T19:33:39" hostname="WENDYCACERES" time="6.171">
+  <properties/>
+  <testcase name="Verify Create Project by API - Todo.ly StringBody" classname="basicRestAssured.CreateProjectTest" time="3.394"/>
+  <testcase name="Verify Create Project by API - Todo.ly ExternalFile" classname="basicRestAssured.CreateProjectTest" time="1.201"/>
+  <testcase name="Verify Create Project by API - Todo.ly JSONObject" classname="basicRestAssured.CreateProjectTest" time="1.572"/>
+  <system-out><![CDATA[Request method:	POST
+Request URI:	https://todo.ly/api/projects.json
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Authorization=Basic YXBpMjAyNEAyMDI0LmNvbToxMjM0NQ==
+				Accept=*/*
+				Content-Type=text/plain; charset=ISO-8859-1
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+   "Content":"EynarRESTASSURED",
+   "Icon":6
+}
+HTTP/1.1 200 OK
+Cache-Control: no-cache, no-store, must-revalidate
+Pragma: no-cache
+Content-Type: application/json; charset=utf-8
+Expires: -1
+Server: Microsoft-IIS/8.0
+Set-Cookie: ASP.NET_SessionId=cv0ucedbn24otze4skn4bwfh; path=/; HttpOnly; SameSite=Lax
+X-AspNetMvc-Version: 2.0
+X-AspNet-Version: 4.0.30319
+X-Powered-By: ASP.NET
+Date: Wed, 23 Oct 2024 19:33:46 GMT
+Content-Length: 406
+
+{
+    "Id": 4370517,
+    "Content": "EynarRESTASSURED",
+    "ItemsCount": 0,
+    "Icon": 6,
+    "ItemType": 2,
+    "ParentId": null,
+    "Collapsed": false,
+    "ItemOrder": 160,
+    "Children": [
+        
+    ],
+    "IsProjectShared": false,
+    "ProjectShareOwnerName": null,
+    "ProjectShareOwnerEmail": null,
+    "IsShareApproved": false,
+    "IsOwnProject": true,
+    "LastSyncedDateTime": "/Date(1729712026777)/",
+    "LastUpdatedDate": "/Date(1729712026763)/",
+    "Deleted": false,
+    "SyncClientCreationId": null
+}
+Request method:	POST
+Request URI:	https://todo.ly/api/projects.json
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Authorization=Basic YXBpMjAyNEAyMDI0LmNvbToxMjM0NQ==
+				Accept=*/*
+				Content-Type=text/plain; charset=ISO-8859-1
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+C:\Users\Moxcr\IdeaProjects\SegundoparcialQA-2024\src\test\resources\createProjectBody.json
+HTTP/1.1 200 OK
+Cache-Control: no-cache, no-store, must-revalidate
+Pragma: no-cache
+Content-Type: application/json; charset=utf-8
+Expires: -1
+Server: Microsoft-IIS/8.0
+Set-Cookie: ASP.NET_SessionId=xvzfgqr2dtuavaxkzf5tyea2; path=/; HttpOnly; SameSite=Lax
+X-AspNetMvc-Version: 2.0
+X-AspNet-Version: 4.0.30319
+X-Powered-By: ASP.NET
+Date: Wed, 23 Oct 2024 19:33:47 GMT
+Content-Length: 407
+
+{
+    "Id": 4370518,
+    "Content": "EynarExternalFile",
+    "ItemsCount": 0,
+    "Icon": 1,
+    "ItemType": 2,
+    "ParentId": null,
+    "Collapsed": false,
+    "ItemOrder": 161,
+    "Children": [
+        
+    ],
+    "IsProjectShared": false,
+    "ProjectShareOwnerName": null,
+    "ProjectShareOwnerEmail": null,
+    "IsShareApproved": false,
+    "IsOwnProject": true,
+    "LastSyncedDateTime": "/Date(1729712028291)/",
+    "LastUpdatedDate": "/Date(1729712028277)/",
+    "Deleted": false,
+    "SyncClientCreationId": null
+}
+Request method:	POST
+Request URI:	https://todo.ly/api/projects.json
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Authorization=Basic YXBpMjAyNEAyMDI0LmNvbToxMjM0NQ==
+				Accept=*/*
+				Content-Type=text/plain; charset=ISO-8859-1
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{"Content":"RESTJsonBody","Icon":7}
+HTTP/1.1 200 OK
+Cache-Control: no-cache, no-store, must-revalidate
+Pragma: no-cache
+Content-Type: application/json; charset=utf-8
+Expires: -1
+Server: Microsoft-IIS/8.0
+Set-Cookie: ASP.NET_SessionId=eeyrgd4md4tdyj12h2y3qvk2; path=/; HttpOnly; SameSite=Lax
+X-AspNetMvc-Version: 2.0
+X-AspNet-Version: 4.0.30319
+X-Powered-By: ASP.NET
+Date: Wed, 23 Oct 2024 19:33:49 GMT
+Content-Length: 402
+
+{
+    "Id": 4370519,
+    "Content": "RESTJsonBody",
+    "ItemsCount": 0,
+    "Icon": 7,
+    "ItemType": 2,
+    "ParentId": null,
+    "Collapsed": false,
+    "ItemOrder": 162,
+    "Children": [
+        
+    ],
+    "IsProjectShared": false,
+    "ProjectShareOwnerName": null,
+    "ProjectShareOwnerEmail": null,
+    "IsShareApproved": false,
+    "IsOwnProject": true,
+    "LastSyncedDateTime": "/Date(1729712029742)/",
+    "LastUpdatedDate": "/Date(1729712029727)/",
+    "Deleted": false,
+    "SyncClientCreationId": null
+}
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
